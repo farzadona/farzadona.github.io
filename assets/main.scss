@@ -285,7 +285,7 @@ h3, .h3 {
 }
 
 .blog-meta {
-  font-size: clamp(0.7rem, 0.66rem + 0.2vw, 0.85rem);
+  font-size: clamp(0.7rem, calc(0.66rem + 0.2vw), 0.85rem);
   color: #9ca3af;
   margin: 0;
   white-space: nowrap;
