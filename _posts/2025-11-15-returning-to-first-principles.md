@@ -4,64 +4,64 @@ title: "Returning to First Principles"
 date: 2025-11-15
 tags: ["Mental Models", "Life in Patterns"]
 description: "A personal story about stripping decisions down to their fundamentals and rebuilding clarity from first principles."
-image: /assets/blog/first-principles.jpg
+image: /_posts/2025-11-15-returning-to-first-principles.png
 ---
 
-I didn’t learn first principles from a physics textbook or a startup founder. Mine came from a quieter place: the moment when every plan I thought I understood stopped making sense. Nothing dramatic. Just one of those years where every assumption feels like it got mispriced.
+![Returning to First Principles]({{ "/_posts/2025-11-15-returning-to-first-principles.png" | relative_url }})
 
-So I did what most people avoid because it sounds annoyingly abstract. I took everything apart.
+I didn’t start using first principles because it sounded smart. I used it because life got noisy, and the usual routines stopped working. You know that moment when everything feels off, but nothing is technically wrong? That was me. So I did the one thing most people avoid: I tore everything down to the studs.
 
-## Why First Principles Hit Harder When Life Gets Messy
+## When Things Stop Adding Up
 
-It’s easy to memorize “reduce things to basics.” It’s harder to realize how many of your decisions are built on habits, inherited beliefs, or whatever the last person you spoke to convinced you made sense.
+I kept catching myself saying things like “this is how it’s supposed to be” or “it worked before.” Those lines are basically autopilot. Comfortable, but not useful.
 
-> Assumptions are comfortable until they cost you momentum.
+> When the story you tell yourself gets louder than what’s actually happening, it’s time to reset.
 
-For me, the wake-up call was noticing how often I justified choices using phrases like “that’s just how it’s done” or “it worked last time.” Those are shortcuts masquerading as logic.
+So I reset. Not dramatically. Just honestly.
 
-First principles gave me permission to scrap everything and ask the real questions:
+I asked myself the questions I’d been dodging:
 
-- What problem am I actually trying to solve?  
-- What outcome matters, not the one that’s socially acceptable to want?  
-- What constraints are real, and which ones did I hallucinate?
+- What am I really trying to solve?  
+- What outcome actually matters to me?  
+- Which limitations are real, and which ones did I just accept because they were familiar?
 
-## Breaking Things Down Without Breaking Yourself
+It’s uncomfortable at first, but it’s also freeing. Once you challenge assumptions, you see how many of them never needed to be there.
 
-I started with one decision that had been draining me for months. Instead of adding more data, I subtracted.
+## How I Broke Things Down
 
-1. Defined the core goal in one sentence.  
-2. Listed every assumption behind the way I was pursuing it.  
-3. Crossed out the ones that were just stories.  
-4. Rebuilt the decision path from scratch.
+I took one decision that had been draining me and rebuilt it from zero.
 
-It wasn’t elegant. It felt like pulling wires out of a wall you definitely didn’t build. But there’s a weird confidence that comes from understanding the base layer of your own thinking.
+1. I wrote down the real goal, not the polite one.  
+2. I listed every assumption behind the way I was approaching it.  
+3. I crossed out anything that was just inherited thinking.  
+4. I built a new plan starting from the raw facts.
 
-### The Surprising Upside: You Get Quieter Inside
+It wasn’t some clean “framework.” It felt more like taking apart a machine while hoping you remember how to put it back. But the clarity hit fast.
 
-When you cut decisions down to fundamentals, the noise drops. You stop ricocheting between opinions, trends, and anxieties because you’re anchored in something sturdier than vibes.
+### The Unexpected Benefit
 
-That alone was worth the effort.
+When you strip decisions down to fundamentals, things get quieter. The internal noise drops. The second-guessing slows down. You stop weighing other people’s opinions like they’re laws of physics.
 
-## Applying First Principles to Everyday Life
+## Using First Principles Day to Day
 
-You don’t need a crisis to use this model. It works just as well on small, boring dilemmas:
+You don’t need a crisis for this stuff. I use it now for simple choices too:
 
-- Choosing what to focus on next  
-- Filtering your inputs  
-- Deciding which goals are actually yours  
-- Evaluating whether a routine still serves its purpose  
+- What to prioritize  
+- What inputs to ignore  
+- Whether a routine is still earning its keep  
+- What goals actually matter versus what I’m “supposed” to care about  
 
-It’s not about efficiency. It’s about honesty.
+The point isn’t to optimize life. It’s to see it clearly.
 
-## What I Learned From Starting Over
+## What This Taught Me
 
-First principles didn’t magically simplify life. They just made the complexity visible instead of chaotic. And once you can see something clearly, you can work with it.
+Starting from first principles didn’t magically make things simple. It just made things honest. And once something is honest, you can work with it.
 
 ### Key Takeaways
 
-- Strip decisions down until the real problem becomes obvious.  
-- Beware of inherited assumptions disguised as common sense.  
-- Rebuilding from zero is slower but dramatically cleaner.  
-- The model isn’t academic; it’s deeply personal when applied honestly.
+- Most assumptions don’t survive contact with the truth.  
+- Rebuilding from scratch is annoying but worth it.  
+- Clarity feels quiet.  
+- First principles thinking isn’t a philosophy exercise. It’s a reset button.
 
-Starting this blog with a post about first principles is fitting. Everything worth doing starts with asking what’s actually true, not what’s convenient.
+Feels right that this is the first post here. If I’m going to write publicly, I might as well start with the thing that helped me get unstuck.
