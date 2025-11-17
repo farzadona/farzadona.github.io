@@ -204,9 +204,18 @@
         let totalLineVertices = 0;
         let totalPointsVertices = 0;
         
-        // Show loading message before starting the download
-        loadingMessage.innerText = 'Loading 3D Model...';
-        loadingMessage.style.display = 'block';
+        const showLoadingMessage = (text) => {
+            loadingMessage.innerText = text;
+            loadingMessage.style.display = 'block';
+        };
+        const hideLoadingMessage = () => {
+            loadingMessage.style.display = 'none';
+        };
+        
+        // Wait briefly before showing the loading copy to avoid a quick flash
+        const loadingMessageTimeout = setTimeout(() => {
+            showLoadingMessage('Loading 3D Model...');
+        }, 700);
 
         gltfLoader.load(
             'https://farzadona.com/humanoid3dmodel.glb',
@@ -251,14 +260,15 @@
 
                 if (!foundMesh) {
                     console.warn('GLTF model loaded but no mesh found to create wireframe/points.');
-                    loadingMessage.innerText = 'Model loaded but no renderable mesh found.';
+                    showLoadingMessage('Model loaded but no renderable mesh found.');
                 }
                 
                 modelGroup.scale.set(7, 7, 7); 
                 modelGroup.position.y = -2.5;
                 
                 scene.add(modelGroup);
-                loadingMessage.style.display = 'none';
+                clearTimeout(loadingMessageTimeout);
+                hideLoadingMessage();
 
                 // Wait for the next frame and then fade in the canvas
                 requestAnimationFrame(() => {
@@ -268,7 +278,8 @@
             undefined,
             (error) => {
                 console.error('An error happened loading the humanoid model:', error);
-                loadingMessage.innerText = 'Failed to load humanoid model. Check console for details.';
+                clearTimeout(loadingMessageTimeout);
+                showLoadingMessage('Failed to load humanoid model. Check console for details.');
             }
         );
 
