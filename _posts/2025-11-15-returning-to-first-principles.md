@@ -4,10 +4,10 @@ title: "Returning to First Principles"
 date: 2025-11-15
 tags: ["Mental Models", "Life in Patterns"]
 description: "A personal story about stripping decisions down to their fundamentals and rebuilding clarity from first principles."
-image: /_posts/2025-11-15-returning-to-first-principles.png
+image: /assets/blog/returning-to-first-principles.png
 ---
 
-![Returning to First Principles]({{ "/_posts/2025-11-15-returning-to-first-principles.png" | relative_url }})
+![Returning to First Principles]({{ "/assets/blog/returning-to-first-principles.png" | relative_url }})
 
 I didn’t start using first principles because it sounded smart. I used it because life got noisy, and the usual routines stopped working. You know that moment when everything feels off, but nothing is technically wrong? That was me. So I did the one thing most people avoid: I tore everything down to the studs.
 
