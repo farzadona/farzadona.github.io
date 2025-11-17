@@ -1,0 +1,48 @@
+- name: "Critical Thinking"
+  slug: critical-thinking
+  group: "Core"
+  description: "Reasoning, fallacies, frameworks for better decisions."
+- name: "Trading Patterns"
+  slug: trading-patterns
+  group: "Core"
+  description: "Market structure, setups, and chart analysis."
+- name: "Mental Models"
+  slug: mental-models
+  group: "Core"
+  description: "Decision-making, cognitive tools, strategic thinking."
+- name: "Questions"
+  slug: questions
+  group: "Core"
+  description: "Inquiry, epistemology, and framing problems."
+- name: "Personal Experiments"
+  slug: personal-experiments
+  group: "Core"
+  description: "Project logs, tools, and self-testing."
+- name: "Writing as Thinking"
+  slug: writing-as-thinking
+  group: "Core"
+  description: "Meta-writing, essay craft, clarity through prose."
+- name: "System Design"
+  slug: system-design
+  group: "Core"
+  description: "Logic systems, feedback loops, architectures of ideas."
+- name: "Attention & Focus"
+  slug: attention-focus
+  group: "Core"
+  description: "Deep work, distraction management, cognitive discipline."
+- name: "Life in Patterns"
+  slug: life-in-patterns
+  group: "Bridge"
+  description: "Where logic, art, and trading intersect with real life."
+- name: "Meta / Process"
+  slug: meta-process
+  group: "Bridge"
+  description: "How you work, learn, and reflect."
+- name: "Side Notes"
+  slug: side-notes
+  group: "General"
+  description: "Edge-case drops or early drafts worth sharing."
+- name: "Notes to Self"
+  slug: notes-to-self
+  group: "General"
+  description: "Informal, reflective entries you still want to publish."

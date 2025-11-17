@@ -1,0 +1,198 @@
+---
+layout: default
+title: About
+permalink: /contact/
+header_theme: dark
+custom_background: true
+---
+
+<div class="about-page relative w-full text-gray-100">
+  <canvas id="about-life-canvas"></canvas>
+  <div class="relative z-10 -mx-4 sm:-mx-8 lg:-mx-12">
+    <section class="min-h-screen w-full flex flex-col items-center justify-center text-center px-6 py-16">
+      <div class="about-card w-full max-w-3xl p-10">
+        <p class="uppercase tracking-[0.4em] text-xs text-violet-300 mb-6 about-text-shadow">Pattern obsessed</p>
+        <h1 class="text-5xl md:text-7xl font-black about-text-shadow mb-6">Farzad Maleki</h1>
+        <p class="text-2xl md:text-3xl font-light text-violet-200 about-text-shadow">Creative systems builder &amp; logic maximalist</p>
+      </div>
+    </section>
+
+    <section id="about-me" class="min-h-screen w-full flex flex-col items-center justify-center text-center px-6 py-16">
+      <div class="about-card p-10 max-w-3xl w-full">
+        <h2 class="text-4xl md:text-5xl font-bold about-text-shadow mb-6">About me</h2>
+        <p class="text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
+          I hunt for patterns across markets, products, and language. The work is equal parts research journal, lab notebook,
+          and personal operating system. I build tools, write frameworks, stress-test beliefs, and publish the messy middle so
+          others can riff on it faster.
+        </p>
+        {% assign contact_email = site.email | default: 'farzadona@gmail.com' %}
+        <a href="mailto:{{ contact_email }}" class="inline-flex items-center justify-center rounded-full bg-violet-500 hover:bg-violet-400 text-white font-semibold text-lg px-8 py-3 transition-colors duration-200 shadow-lg shadow-violet-900/30">
+          {{ contact_email }}
+        </a>
+      </div>
+    </section>
+
+    <section class="min-h-screen w-full flex flex-col items-center justify-center text-center px-6 py-16">
+      <div class="about-card p-10 max-w-4xl w-full">
+        <h2 class="text-4xl md:text-6xl font-bold about-text-shadow mb-8">Find me on</h2>
+        <div class="flex flex-wrap justify-center gap-10 text-gray-300">
+        {% assign github_url = site.github_url | default: 'https://github.com/farzadona' %}
+        {% assign linkedin_url = site.linkedin_url | default: 'https://www.linkedin.com/in/farzadona/' %}
+        {% assign x_url = site.x_url | default: 'https://twitter.com/farzadona' %}
+        <a href="{{ github_url }}" class="transition-colors hover:text-white" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg class="w-14 h-14 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="{{ linkedin_url }}" class="transition-colors hover:text-white" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg class="w-14 h-14 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+        <a href="{{ x_url }}" class="transition-colors hover:text-white" target="_blank" rel="noreferrer" aria-label="X">
+          <svg class="w-14 h-14 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
+      </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('about-life-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    // Configuration matching the reference effect
+    const CELL_SIZE = 15;
+    const CELL_COLOR = '#8b5cf6';
+    const CELL_GLOW = 'rgba(139, 92, 246, 0.6)';
+    const BACKDROP_COLOR = 'rgba(4, 1, 17, 0.92)';
+    const UPDATE_INTERVAL = 100; // ms
+    const SEED_DENSITY = 0.9; // 10% alive to start
+    const MOUSE_SPARKLE_DENSITY = 0.6; // lower = more sparks
+
+    let cols = 0;
+    let rows = 0;
+    let grid = [];
+    let lastUpdateTime = 0;
+
+    function createGrid(r, c) {
+      return Array.from({ length: r }, () => Array(c).fill(0));
+    }
+
+    function seedGrid() {
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          grid[y][x] = Math.random() > SEED_DENSITY ? 1 : 0;
+        }
+      }
+    }
+
+    function initGrid() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      cols = Math.ceil(canvas.width / CELL_SIZE);
+      rows = Math.ceil(canvas.height / CELL_SIZE);
+      grid = createGrid(rows, cols);
+      seedGrid();
+      drawGrid();
+    }
+
+    function countNeighbors(x, y) {
+      let count = 0;
+      for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
+          if (i === 0 && j === 0) continue;
+          const col = (x + i + cols) % cols;
+          const row = (y + j + rows) % rows;
+          count += grid[row][col];
+        }
+      }
+      return count;
+    }
+
+    function updateGrid() {
+      const next = createGrid(rows, cols);
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          const state = grid[y][x];
+          const neighbors = countNeighbors(x, y);
+          if (state === 1) {
+            next[y][x] = neighbors === 2 || neighbors === 3 ? 1 : 0;
+          } else if (neighbors === 3) {
+            next[y][x] = 1;
+          }
+        }
+      }
+      grid = next;
+    }
+
+    function drawGrid() {
+      ctx.fillStyle = BACKDROP_COLOR;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = CELL_COLOR;
+      ctx.shadowColor = CELL_GLOW;
+      ctx.shadowBlur = 14;
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          if (grid[y][x] === 1) {
+            ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE - 1, CELL_SIZE - 1);
+          }
+        }
+      }
+      ctx.shadowBlur = 0;
+    }
+
+    function gameLoop(timestamp = 0) {
+      if (timestamp - lastUpdateTime > UPDATE_INTERVAL) {
+        updateGrid();
+        drawGrid();
+        lastUpdateTime = timestamp;
+      }
+      requestAnimationFrame(gameLoop);
+    }
+
+    function sparkCells(clientX, clientY, radius = 1) {
+      const gridX = Math.floor(clientX / CELL_SIZE);
+      const gridY = Math.floor(clientY / CELL_SIZE);
+
+      for (let i = -radius; i <= radius; i++) {
+        for (let j = -radius; j <= radius; j++) {
+          if (Math.random() > MOUSE_SPARKLE_DENSITY) {
+            const col = gridX + i;
+            const row = gridY + j;
+            if (col >= 0 && col < cols && row >= 0 && row < rows) {
+              grid[row][col] = 1;
+            }
+          }
+        }
+      }
+    }
+
+    function handleMouseMove(event) {
+      sparkCells(event.clientX, event.clientY);
+    }
+
+    function handleTouchMove(event) {
+      if (!event.touches.length) return;
+      const touch = event.touches[0];
+      sparkCells(touch.clientX, touch.clientY, 2);
+    }
+
+    function handlePointerDown(event) {
+      sparkCells(event.clientX, event.clientY, 2);
+    }
+
+    initGrid();
+    requestAnimationFrame(gameLoop);
+
+    window.addEventListener('resize', initGrid);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('mousedown', handlePointerDown);
+  });
+</script>

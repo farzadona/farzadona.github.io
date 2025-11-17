@@ -1,0 +1,31 @@
+title: FM
+author: Farzad Maleki
+description: "I study patterns—in markets, minds, and meaning."
+# IMPORTANT: Replace "your-username" with your actual GitHub username.
+url: "https://farzadona.com"
+baseurl: ""
+email: farzadona@gmail.com
+linkedin_url: "https://www.linkedin.com/in/farzadona/"
+
+# Build settings
+theme: minima # A good default theme, can be removed if you want 100% custom styling.
+future: true
+paginate: 6
+paginate_path: "/blog/page:num"
+
+# Header pages
+header_pages:
+  - contact.md
+
+# Excerpt settings
+show_excerpts: true
+
+# Front Matter Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Farzad Maleki" # Sets a default author for all posts

@@ -1,0 +1,26 @@
+{% assign header_theme = include.theme | default: page.header_theme | default: 'dark' %}
+{% if header_theme == 'light' %}
+  {% assign header_bg = 'bg-white/80' %}
+  {% assign logo_class = 'text-gray-900' %}
+  {% assign nav_class = 'text-gray-700' %}
+  {% assign hover_class = 'hover:text-black' %}
+{% else %}
+  {% assign header_bg = 'bg-gray-900/80' %}
+  {% assign logo_class = 'text-gray-50' %}
+  {% assign nav_class = 'text-gray-300' %}
+  {% assign hover_class = 'hover:text-white' %}
+{% endif %}
+
+<header class="fixed top-0 left-0 right-0 z-30 {{ header_bg }} backdrop-blur-sm shadow-sm">
+    <div class="mx-auto w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl px-4 sm:px-8 lg:px-12">
+        <div class="flex h-16 items-center justify-between">
+            <div class="text-2xl font-black tracking-tighter {{ logo_class }}">
+                <a href="{{ site.baseurl }}/">{{ site.title | default: 'FM' }}</a>
+            </div>
+            <nav class="flex items-center gap-6 text-md font-semibold {{ nav_class }}">
+                <a href="{{ site.baseurl }}/blog" class="transition-colors {{ hover_class }}">Blog</a>
+                <a href="{{ site.baseurl }}/contact/" class="transition-colors {{ hover_class }}">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
