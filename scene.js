@@ -180,7 +180,7 @@ function triggerCollapse() {
 
 // Ensure all CTA buttons wait for the collapse animation before navigating away
 const CTA_DELAY_MS = 2000;
-['read-blog-btn', 'view-projects-btn', 'explore-projects-btn', 'about-contact-btn'].forEach(id => {
+['about-contact-btn'].forEach(id => {
     const btn = document.getElementById(id);
     if (!btn) return;
 

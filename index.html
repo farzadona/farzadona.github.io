@@ -2,26 +2,30 @@
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
-    
-    <!-- 1. Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- 2. Load Inter Font --><link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- 1. Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 2. Load Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
+
     <style>
         /* 3. Base styles */
         body {
             font-family: 'Inter', sans-serif;
             /* Initial background color, will be controlled by JS */
-            background-color: rgb(255, 255, 255); 
-            color: #111827; /* text-gray-900 */
+            background-color: rgb(255, 255, 255);
+            color: #111827;
+            /* text-gray-900 */
         }
-        
+
         /* 4. Fixed canvas (z-index 0) */
         #webgl-canvas {
             position: fixed;
@@ -31,17 +35,19 @@
             height: 100%;
             z-index: 0;
             background: transparent;
-            opacity: 0; /* Start invisible */
-            transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
+            opacity: 0;
+            /* Start invisible */
+            transition: opacity 0.5s ease-in-out;
+            /* Smooth fade-in */
         }
-        
+
         /* 5. Scrollable main content (z-index 1) */
         main {
             position: relative;
             z-index: 1;
             width: 100%;
         }
-        
+
         /* 6. 100vh sections for scrolling */
         .scroll-section {
             height: 100vh;
@@ -49,7 +55,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         /* 7. Loading Message */
         #loading-message {
             position: fixed;
@@ -63,7 +69,8 @@
             padding: 1rem 2rem;
             border-radius: 0.5rem;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            display: none; /* Hide by default to prevent FOUC */
+            display: none;
+            /* Hide by default to prevent FOUC */
         }
 
         /* Utility class to reveal the canvas */
@@ -72,22 +79,26 @@
         }
     </style>
 </head>
+
 <body class="bg-white text-gray-900">
 
     {% include post_header.html theme='light' %}
 
     <!-- Canvas for Three.js scene --><canvas id="webgl-canvas"></canvas>
-    
-    <!-- Loading Message (content set by JS) --><div id="loading-message"></div>
 
-    <!-- Scrollable content --><main>
+    <!-- Loading Message (content set by JS) -->
+    <div id="loading-message"></div>
+
+    <!-- Scrollable content -->
+    <main>
         <section class="scroll-section">
             <div class="max-w-md rounded-xl bg-white/20 p-6 text-center backdrop-blur-sm">
                 <h1 class="text-5xl font-black mb-4">Farzad Maleki</h1>
-                <p class="text-lg">I study patterns—in markets, minds, and meaning. Always asking better questions. Logic is the lens. Art is the expression. Life is the test. Repeat, refine.</p>
+                <p class="text-lg">I study patterns—in markets, minds, and meaning. Always asking better questions.
+                    Logic is the lens. Art is the expression. Life is the test. Repeat, refine.</p>
             </div>
         </section>
-        
+
         <section class="scroll-section">
             <div class="max-w-md rounded-xl bg-white/20 p-6 text-center backdrop-blur-sm">
                 <h2 class="text-5xl font-black mb-4">Current Focus</h2>
@@ -95,31 +106,11 @@
                     Training my critical reasoning muscle.<br>
                     Designing smarter tools.<br>
                     I map chaos.</p>
-                <p id="view-projects-btn" data-target-url="{{ site.baseurl }}/blog/" class="text-lg font-semibold text-gray-700 cursor-pointer hover:text-black transition-colors">[ View projects → ]</p>
-            </div>
-        </section>
-        
-        <section class="scroll-section">
-            <div class="max-w-md rounded-xl bg-white/20 p-6 text-center backdrop-blur-sm">
-                <h2 class="text-5xl font-black mb-4">On My Mind</h2>
-                <p class="text-lg mb-4"> How logic fails us under pressure<br>
-                     Pattern recognition in trading and life<br>
-                     Why questions &gt; answers<br>
-                     A framework for deeper thinking</p>
-                <p id="read-blog-btn" data-target-url="{{ site.baseurl }}/blog/" class="text-lg font-semibold text-gray-700 cursor-pointer hover:text-black transition-colors">[ Read the blog → ]</p>
             </div>
         </section>
 
-        <section class="scroll-section">
-            <div class="max-w-md rounded-xl bg-white/20 p-6 text-center backdrop-blur-sm">
-                <h2 class="text-5xl font-black mb-4">Open Projects</h2>
-                <p class="text-lg mb-4">Building tools and frameworks.<br>
-                    Code, concepts, critiques welcome.<br>
-                    If you build, think, or trade—we’re already aligned.</p>
-                <p id="explore-projects-btn" data-target-url="{{ site.baseurl }}/blog/" class="text-lg font-semibold text-gray-700 cursor-pointer hover:text-black transition-colors">[ Explore projects → ]</p>
-            </div>
-        </section>
-        
+
+
         <section id="about-me" class="scroll-section">
             <div class="max-w-md rounded-xl bg-white/20 p-6 text-center backdrop-blur-sm">
                 <h2 class="text-5xl font-black mb-4">About Me</h2>
@@ -127,7 +118,9 @@
                     Obsessed with logic, language, and leverage.<br>
                     This site is my scratchpad.<br>
                     Let's connect.</p>
-                <a id="about-contact-btn" href="{{ site.baseurl }}/contact/" data-target-url="{{ site.baseurl }}/contact/" class="text-lg font-semibold text-gray-700 hover:text-black transition-colors">[ Contact → ]</a>
+                <a id="about-contact-btn" href="{{ site.baseurl }}/contact/"
+                    data-target-url="{{ site.baseurl }}/contact/"
+                    class="text-lg font-semibold text-gray-700 hover:text-black transition-colors">[ Contact → ]</a>
             </div>
         </section>
     </main>
@@ -136,7 +129,8 @@
         <p class="text-sm text-gray-500">© 2025 FM — All rights reserved.</p>
     </footer>
 
-    <!-- 8. Import map for Three.js modules --><script type="importmap">
+    <!-- 8. Import map for Three.js modules -->
+    <script type="importmap">
     {
         "imports": {
             "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
@@ -146,7 +140,8 @@
     }
     </script>
 
-    <!-- 9. Main JavaScript Logic --><script type="module">
+    <!-- 9. Main JavaScript Logic -->
+    <script type="module">
         import * as THREE from 'three';
         import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
         import * as CANNON from 'cannon-es';
@@ -171,7 +166,7 @@
         const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100);
         camera.position.z = 7.0;
         scene.add(camera);
-        
+
         // === Renderer ===
         const renderer = new THREE.WebGLRenderer({
             canvas: canvas,
@@ -180,7 +175,7 @@
         });
         renderer.setSize(sizes.width, sizes.height);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        
+
         // === Physics Setup (CANNON.js) ===
         const world = new CANNON.World();
         world.gravity.set(0, -9.82, 0); // Gravity pulling things down
@@ -193,17 +188,17 @@
         groundBody.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2); // Rotate to be horizontal
         groundBody.position.y = -5; // Floor position
         world.addBody(groundBody);
-        
+
         // === Model Loading ===
         const gltfLoader = new GLTFLoader();
         const modelGroup = new THREE.Group(); // Group to hold points and lines
         const modelColor = 0x111827; // text-gray-900
-        
+
         let lineGeometry = null;
         let pointsGeometry = null;
         let totalLineVertices = 0;
         let totalPointsVertices = 0;
-        
+
         const showLoadingMessage = (text) => {
             loadingMessage.innerText = text;
             loadingMessage.style.display = 'block';
@@ -211,7 +206,7 @@
         const hideLoadingMessage = () => {
             loadingMessage.style.display = 'none';
         };
-        
+
         // Wait briefly before showing the loading copy to avoid a quick flash
         const loadingMessageTimeout = setTimeout(() => {
             showLoadingMessage('Loading 3D Model...');
@@ -231,7 +226,7 @@
                         lineSegments.material.depthTest = false; // Render on top
                         lineSegments.material.opacity = 0.75;
                         lineSegments.material.transparent = true;
-                        
+
                         // 2. Create Points
                         const pointsMaterial = new THREE.PointsMaterial({
                             color: modelColor,
@@ -262,10 +257,10 @@
                     console.warn('GLTF model loaded but no mesh found to create wireframe/points.');
                     showLoadingMessage('Model loaded but no renderable mesh found.');
                 }
-                
-                modelGroup.scale.set(7, 7, 7); 
+
+                modelGroup.scale.set(7, 7, 7);
                 modelGroup.position.y = -2.5;
-                
+
                 scene.add(modelGroup);
                 clearTimeout(loadingMessageTimeout);
                 hideLoadingMessage();
@@ -314,7 +309,7 @@
 
                 const center = new THREE.Vector3().addVectors(start, end).multiplyScalar(0.5);
                 const length = start.distanceTo(end);
-                
+
                 if (length < 0.01) continue; // Skip zero-length segments
 
                 // Create Three.js mesh for the line
@@ -328,7 +323,7 @@
                 // Create Cannon.js body (a thin box)
                 const lineShape = new CANNON.Box(new CANNON.Vec3(length / 2, 0.01, 0.01));
                 const body = new CANNON.Body({ mass: 0.1, position: new CANNON.Vec3(center.x, center.y, center.z) });
-                
+
                 const direction = new THREE.Vector3().subVectors(end, start).normalize();
                 const quaternion = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(1, 0, 0), direction);
                 body.quaternion.set(quaternion.x, quaternion.y, quaternion.z, quaternion.w);
@@ -349,7 +344,7 @@
 
         // Ensure all CTA buttons wait for the collapse animation before navigating away
         const CTA_DELAY_MS = 2000;
-        ['read-blog-btn', 'view-projects-btn', 'explore-projects-btn', 'about-contact-btn'].forEach(id => {
+        ['about-contact-btn'].forEach(id => {
             const btn = document.getElementById(id);
             if (!btn) return;
 
@@ -368,12 +363,12 @@
         // === Scroll & Lerp Logic ===
         let scrollFraction = 0;
         const lookAtTarget = new THREE.Vector3(0, -1.5, 0); // Target model's upper body
-        
+
         let targetCameraZ = 7.0, currentCameraZ = 7.0;
         let targetCameraX = 0, currentCameraX = 0;
         let targetCameraY = 0, currentCameraY = 0;
         let targetCameraRotZ = 0, currentCameraRotZ = 0;
-        
+
         let targetDrawFraction = 0, currentDrawFraction = 0;
 
         const white = { r: 255, g: 255, b: 255 };
@@ -385,12 +380,12 @@
         const updateScrollTargets = () => {
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
             scrollFraction = maxScroll > 0 ? latestScrollY / maxScroll : 0;
-            
+
             targetCameraZ = 5.0 + Math.cos(scrollFraction * Math.PI * 2) * 4.5;
             targetCameraX = Math.sin(scrollFraction * Math.PI * 2) * 5.0;
             targetCameraY = Math.cos(scrollFraction * Math.PI * 4) * 2.0;
             targetCameraRotZ = Math.sin(scrollFraction * Math.PI * 2) * 0.8;
-            
+
             targetBg.r = white.r + (gray50.r - white.r) * scrollFraction;
             targetBg.g = white.g + (gray50.g - white.g) * scrollFraction;
             targetBg.b = white.b + (gray50.b - white.b) * scrollFraction;
@@ -414,10 +409,10 @@
         window.addEventListener('resize', () => {
             sizes.width = window.innerWidth;
             sizes.height = window.innerHeight;
-            
+
             camera.aspect = sizes.width / sizes.height;
             camera.updateProjectionMatrix();
-            
+
             renderer.setSize(sizes.width, sizes.height);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         });
@@ -434,17 +429,17 @@
             currentCameraY += (targetCameraY - currentCameraY) * lerpFactor;
             currentCameraZ += (targetCameraZ - currentCameraZ) * lerpFactor;
             currentCameraRotZ += (targetCameraRotZ - currentCameraRotZ) * lerpFactor;
-            
+
             camera.position.set(currentCameraX, currentCameraY, currentCameraZ);
             camera.rotation.z = currentCameraRotZ;
             camera.lookAt(lookAtTarget);
-            
+
             // Lerp background color
             currentBg.r += (targetBg.r - currentBg.r) * lerpFactor;
             currentBg.g += (targetBg.g - currentBg.g) * lerpFactor;
             currentBg.b += (targetBg.b - currentBg.b) * lerpFactor;
             document.body.style.backgroundColor = `rgb(${Math.floor(currentBg.r)}, ${Math.floor(currentBg.g)}, ${Math.floor(currentBg.b)})`;
-            
+
             if (collapseTriggered) {
                 // If collapsed, update physics
                 world.step(1 / 60, deltaTime, 3);
@@ -456,13 +451,13 @@
             } else {
                 // If not collapsed, run normal animations
                 modelGroup.rotation.y += 0.002;
-                
+
                 currentDrawFraction += (targetDrawFraction - currentDrawFraction) * lerpFactor;
-                
+
                 if (lineGeometry && pointsGeometry) {
                     const lineDrawCount = Math.floor(currentDrawFraction * totalLineVertices);
                     const pointsDrawCount = Math.floor(currentDrawFraction * totalPointsVertices);
-                    
+
                     lineGeometry.setDrawRange(0, lineDrawCount);
                     pointsGeometry.setDrawRange(0, pointsDrawCount);
                 }
@@ -470,13 +465,14 @@
 
             // Render the scene
             renderer.render(scene, camera);
-            
+
             // Next frame
             requestAnimationFrame(animate);
         };
 
         animate();
     </script>
-    
+
 </body>
+
 </html>
